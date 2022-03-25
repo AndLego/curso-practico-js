@@ -75,6 +75,19 @@ function calcularAreaTriangulo(){
     alert(area);
 }
 
+function calcularAltura(){
+    const ladoA = Number(document.getElementById("InputTrianguloIsoA").value);
+    const ladoB = Number(document.getElementById("InputTrianguloIsoB").value);
+    const base = Number(document.getElementById("InputTrianguloIsoBase").value);
+    
+    if(ladoA === ladoB){
+        const altura = Math.sqrt((ladoA * ladoA) - ((base * base) / 4));
+        return alert(altura);
+    }else{
+        return alert("Los lados a y b no son iguales");
+    }
+}
+
 function calcularCircunferencia(){
     const radio = Number(document.getElementById("InputCirculoRadio").value);
     const diametro = perimetroCirculo(radio);
