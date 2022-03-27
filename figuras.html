@@ -5,20 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras Geometricas</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         Figuras Geometricas
     </header>
+    <h1>Primer taller del Curso Práctico de JavaScript</h1>
     <main>
-        <h1>Primer taller del Curso Práctico de JavaScript</h1>
-        <form action="">
-            <h3>Cuadrado</h3>
+        <form class="card">
+            <div class="card-title">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACMUlEQVRoge2ZPW/TUBSGn5PEcaUSfgJ0pgqBibmIqh8LG0MYIworEr8DMaCihoiNDmyVmjgU6M7GR2GuyD/ArUSumx6GeIhsp8Sobu9wn8WWzx3eR9cfkl9wOBxnIf9aMOxSF6GFcA9YAOaLjwXAMXCI8lHLdPwVDs5aPFVEe/gRvEDYAErnnTInI2DLC3kqDzBZCzJFtIcfCQGwBPwB2pyy7VU4kBWOi8s7keE989GIOkIT2AB8YN8LWZsmk8L0eGUCNAoYDANuFhl4pjx9GlHAwASoCXiZtSa1I8MudSnxBTAKd/w1vhWedAZMnwbKZ6CiQsNf5cfkPHXvi9CKr7dtkQCorvIV5TVQFqWVnKcfYmE5Pr4tPF1+xpk0zjhB1tvoGoDn87PYTPnxovh2Eq4nZ1kiVwBkiaNiY+VH7hPGp7Xk7LK/D+eGE7ENJ2IbTsQ2nIhtOBHbcCK24URsw4nYhhOxDSdiG07ENpyIbWSJhAC6k/6bd9loj6vx6e/kLEtkABBVuFFkqP/hRFgEQPmVnKVFlA/xpFlwrtwoPARA4owTpES0TIdxZ/fY9GkUnm5GTJdbwCNgpEonOU+JxO3pFuCLsmuDjOlxW0rsAlVg019PVx7ZZeg7qlGNALgLGJS2CNuVOb5fVN2gO9RO5qjrKU3GO1EFPnkh61ll6PR6eizzHHgClAtLPBsjYNMLeZarnp5k2GdRlBbKctwUXdRr+QjlEGFPhTfJ8tPhcOTjLyPSl9Vxtk5zAAAAAElFTkSuQmCC">
+                <h3>Cuadrado</h3>
+            </div>
             <p>Medidas del cuadrado</p>
-            <label for="InputCuadrado">
-                Lado
-            </label>
-            <input type="number" name="" id="InputCuadrado">
+            <input type="number" placeholder="Medida de un lado" id="InputCuadrado">
             <button type="button" onclick="calculatePerimeterSquare()">
                 Perimetro
             </button>
@@ -27,25 +31,18 @@
             </button>
         </form>
 
-        <form action="">
-            <h3>Triangulo</h3>
+        <form class="card">
+            <div class="card-title">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAEIElEQVRoge2YW2gcZRTHf2dnZ7MpRq1oVVC8lJQQL4hK8fZgSm2STaWCaMA+KOKDSrCkJlRShVj70NomFUR9tKgU7IP60CS7T3koCBXF2ocoDcULXlNswWizu99kjw9J6ze72cvszmAe9v8yzJ/vnP//zJk5M/NBE0000UQ5qCKqSJQa8SiT59P0oyjwcVQakV0dnSZpsnwLOK5HhzzKhSh0YlEkBfCyDAI3Azd6cV6KSieSDmiGdabALHD5MjXvFtggffwetlYkHTDKXv4zD9BmYrwehVboHchN0inCN5QOiEWFu1t6ORWmXvgdEA6x8nRzBA6FLRdqAV6GrQJbKizZ5KXpC1MztFtIv8Q1ZzkFdFj058vHByzuO/ca7pR7MWHohtYBc5YX8JtXhEGEQUAtvsPM8XxYuqF0QI+x1jicBq62Mn+Q6OFpgPwUHwHbrZDzrku7bObPRrVD6YBxeA3bPCwsLnEAeMor4HsTrzWGkTC0Gy4gO8l64EWbE2Vf6yP8dPF8TYqfFcaLQgeyE2xoVL/hAhxhDGi5eC7wS9xhrHhdIsl+hd9synHY36h+QwWYKR5W2GZzBWWXdPNP8Vrp4m9RXrU5VR4zaTY34qHuAnSUmMJBHymcSPRypFyM+wWHga98eeCAjtbvo+5As5FngHtsL6IMifhGpg8ySkFgyEcqd5n7lqZVPahrjOo0l+WznBa43jJyJJHyjcqyMFN85rv1lD9cQ7tsYz6ol7o6kM+yy2ceFha19rG4qLwM5C4RwrV5l+F6vAQu4MIkNwjstDkVDrT28WOtOZIpziC8Z3MiDC1McFNQP4ELiAv7gDWXhOHXhPBm0Dyuxx7wvYlbnRh7g+YJVEA+zUbgKZtTGFlpbFaDbOU8sKeI3m4yvg+/qgjWAWUM/4P/tXuCDwPlsOAmeReYsSjRAgeDbMXUXEBukn7gIZsTYYeMUqg1RzGkC6+w9J1k4/58hidqzlHLIj1KwrQxA6y36KOJXvprFaqE3BSZoh+h790kndJFtlpsTR3w2tiJ33yuEGBs1oBhYNE6v8VbYEctgVUL0AzrFH+bVRlLpjgTzGN5LP/ov+/TEHbrBNdVi61agCnwBnCFRc0laPwrshhujN3AXxbVZmKMVourWEBukk7g2SJ6RFI+oVAg3cyJlFyY53IT3FEprnIHhHHsLRLhpDvP4XpNVkO8hXHgB4tyJMZblWLKFuCl6RPotjmBYXnS97CFCukiq5QMh03eFKmyMSuROk3cZDkJ3GYt/MTt5fFwrJaHKmLSHAcetOiyWzErFpBPM4DydlQm64IwkOjhnVK6CPopV5oks/h3GVYDzrlCu/RwziZLngGTLNkiWS24yhRKX56+DmSPcWvMYQZrl2GVIV9wuD25hdn/20gTTTTRxBL+Bd5kI57YMLJ9AAAAAElFTkSuQmCC">
+                <h3>Triangulo</h3>
+            </div>
             <p>Medidas del Triangulo</p>
-            <label for="InputTrianguloA">
-                Lado A
-            </label>
-            <input type="number" id="InputTrianguloA">
-            <label for="InputTrianguloB">
-                Lado B
-            </label>
-            <input type="number" id="InputTrianguloB">
-            <label for="InputTrianguloBase">
-                Base
-            </label>
-            <input type="number" id="InputTrianguloBase">
-            <label for="InputTrianguloAltura">
-                Altura
-            </label>
-            <input type="number" name="" id="InputTrianguloAltura">
+            <div class="card-triangulo">
+                <input type="number" placeholder="Lado A" id="InputTrianguloA">             
+                <input type="number" placeholder="Lado B" id="InputTrianguloB">               
+                <input type="number" placeholder="Base" id="InputTrianguloBase">              
+                <input type="number" placeholder="Altura" name="" id="InputTrianguloAltura">
+            </div>
             <button type="button" onclick="calcularPerimetroTriangulo()">
                 Perimetro
             </button>
@@ -54,42 +51,32 @@
             </button>
         </form>
 
-        <form action="">
-            <h3>Triangulo</h3>
+        <form class="card">
+            <h3>Altura Triangulo</h3>
             <p>Medidas del Triangulo Isósceles</p>
-            <label for="InputTrianguloA">
-                Lado A
-            </label>
-            <input type="number" id="InputTrianguloIsoA">
-            <label for="InputTrianguloB">
-                Lado B
-            </label>
-            <input type="number" id="InputTrianguloIsoB">
-            <label for="InputTrianguloBase">
-                Base
-            </label>
-            <input type="number" id="InputTrianguloIsoBase">
+            <input type="number" placeholder="Lado A" id="InputTrianguloIsoA">               
+            <input type="number" placeholder="Lado B" id="InputTrianguloIsoB">             
+            <input type="number" placeholder="Base" id="InputTrianguloIsoBase">
             <button type="button" onclick="calcularAltura()">
                 Altura
-            </button>         
-        </form>
-
-        <form action="">
-            <h3>Circulo</h3>
+            </button>
+    </form>
+    
+        <form class="card">
+            <div class="card-title">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAClUlEQVRIie3Wv09TURTA8e95fbSFRCcXLSSIDM7yR9iUH5Uwsjkaf8SAOmmYO2mig4k/Fl00CKXQ9/gbNLq5ATFgdEWSWl7fu8fhvVYKLS1towtnvfecz7u5J+8eOI1/FNLuxtI6Q7aSVWVcYBgYipa2VdgSWPMN+YEMOz2BSwVSts0j4Dpgt9huBBZ9w73+cb51DJcdpix4A5wBPIQlVZYVviSs8GT7hkGBKyJkUaaBOLBnlNlkhsKJYa/ILYTHgCXw3rd40H+VrWM/dJWRmEVOhRnAINyJp3l6XM6Rk3oOgefgew53206MouIyF+UG5SKTbSWVCqQ8h1+eg3aCHsLVc9hVl/MtEzyHF56DVhzedYrWcIfFCH9+eK3ujkvrDNmGLSAILC63utNWUS5yyRK+ApbvMzwwyffqmnVwo61kgRjCUrcoQDLDhkAesG2b7MG1OlghA6BKvlu0GiaqVa3dEBbDKIAKH3sFq/AJQAhrN4SRsPsSCX72Ck4ka/eaag6D9gqsxe+aYY6DfwDsl7jQK9eLRbXkb0cfgVXYABCLsV7BBGEtVTabwgJrACL1rd9NWFEt0bB2Q9g35AEfZbq8yki3aNllVCEL+H7ASlN4IMMOwmsgHrPIdQvHlBzhM/ny4F/rCAxQsVgA9lSYqbjMdYpWiswrTAO7fYaFtpLKRSarz2IneKXIfPVZ9F3GG+1pPgi43ER5QjgIfAiU+8lM2PVNP9hlNKbkopMahNvxNM9OBAP460wYw1vgLOAJ5I2wjPA5Hg9HH89jkIAxS7gWNVIfsGsJs3a6vpPbhgG0wLmKzUPgBq2HPR941ScsSDr8GXUMV6NUIGXHmFJhQoSLaDTeCtuqbIqy5gesHO7e0/jv8Qc/9QD4ufmGAwAAAABJRU5ErkJggg==">
+                <h3>Circulo</h3>
+            </div>
             <p>Medidas del circulo</p>
-            <label for="InputCirculoRadio">
-                Radio
-            </label>
-            <input type="number" id="InputCirculoRadio">
+            <input type="number" placeholder="Medida del radio" id="InputCirculoRadio">
             <button type="button" onclick="calcularCircunferencia()">
                 Circunferencia
             </button>
             <button type="button" onclick="calcularAreaCirculo()">
                 Area
-            </button>
+            </button>         
         </form>
     </main>
-
     <script src="./figuras.js"></script>
 </body>
 </html>
