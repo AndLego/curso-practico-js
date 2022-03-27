@@ -1,0 +1,105 @@
+:root {
+    --sm: 1rem;
+    --md: 1.4rem;
+    --lg: 1.8rem;
+    --dark: #212121;
+    --light: white;
+    --enfasis: #fab700;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+html {
+    font-size: 62.5%;
+    background-color: #2a2e34;
+}
+
+main {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    margin: auto;
+    width: 80%;
+    height: 50rem;
+    padding: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--dark);
+    color: var(--light);
+    width: 60%;
+    height: 28rem;
+    margin: 1rem;
+    border-radius: 0.4rem;
+    border: 0.2rem solid var(--enfasis);
+    padding: 1.6rem 3.6rem 2.4rem 3.6rem;
+    box-shadow: 0.5rem 0.5rem 0 var(--enfasis);
+}
+.card-title{
+    display: flex;
+}
+.card-title img{
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+}
+.card h3{
+    font-size: var(--lg);
+    text-align: center;
+    color: var(--enfasis);
+    font-weight: 900;
+}
+.card p{
+    font-size: var(--md);
+    text-align: center;
+}
+.card input{
+    background-color: var(--dark);
+    width: 100%;
+    color: var(--enfasis);
+    border: none;
+    border: 0.15rem solid var(--enfasis);
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.6rem;  
+    text-align: center;
+}
+main form input::placeholder{
+    color: var(--light);
+    font-size: 1rem;
+    text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.card-triangulo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+main form button{
+    background-color: var(--enfasis);
+    color:var(--dark);
+    font-size: var(--sm);
+    font-weight: bold;
+    border: 0.2rem solid var(--enfasis);
+    padding: 0.4rem 0.8rem ;
+    border-radius: 0.6rem;
+    width: 100%;
+    
+}
+main form button:hover{
+    color: var(--light);
+    cursor: pointer;
+}
