@@ -45,6 +45,21 @@ main {
     padding: 1.6rem 3.6rem 2.4rem 3.6rem;
     box-shadow: 0.5rem 0.5rem 0 var(--enfasis);
 }
+.card-discount{
+    height: 44rem;
+    width: 30rem;
+    padding: 1.6rem 4.4rem 2.4rem 4.4rem;
+}
+.card-discount h2{
+    text-align: center;
+    font-size: large;
+}
+.card-cupones{
+    width: 30rem;
+}
+.card-cupones img{
+    width: 100%;
+}
 .card-title{
     display: flex;
 }
@@ -102,4 +117,17 @@ main form button{
 main form button:hover{
     color: var(--light);
     cursor: pointer;
+}
+.button-discount, #InputPrice, #InputDiscount, #InputCoupon{
+    width: 80%;
+}
+
+.cupones div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cupones img{
+    width: 3rem;
+    margin-right: 1rem;
 }

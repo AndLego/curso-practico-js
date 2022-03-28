@@ -12,25 +12,50 @@
         <h1>Procentajes y Descuentos</h1>
         <p>Este es el segundo taller del Curso Practico de JavaScript</p>
     </header>
-    <form class="card card-discount">
-        <h2>Calcula el precio a pagar de tus productos con descuentos</h2>
-        <form action="">
-            <label for="InputPrice">Escribe el precio de tu producto:</label>
-            <input type="number" id="InputPrice">
-            <label for="InputDiscount">Escribe el descuento de tu producto</label>
-            <input type="number" id="InputDiscount">
-            <button type="button" onclick="onClickButtonPriceDiscount()">
-                Calcular
-            </button>
-            <label for="InputCoupon">Aplica un cupon</label>
-            <input type="text" id="InputCoupon">
-            <button type="button" onclick="onClickButtonCouponDiscount()">
-                Aplicar Cupon
-            </button>
-            <p id="ResultP"></p>
-            <p id="ResultC"></p>
+    <main>
+        <form class="card card-discount">
+            <h2>Calcula el precio a pagar de tus productos con descuentos</h2>
+            <form action="">
+                <label for="InputPrice">Escribe el precio de tu producto:</label>
+                <input type="number" id="InputPrice">
+                <label for="InputDiscount">Escribe el descuento de tu producto</label>
+                <input type="number" id="InputDiscount">
+                <button class="button-discount" type="button" onclick="onClickButtonPriceDiscount()">
+                    Calcular
+                </button>
+                <label for="InputCoupon">Aplica un cupon</label>
+                <input type="text" id="InputCoupon">
+                <button class="button-discount" type="button" onclick="onClickButtonCouponDiscount()">
+                    Aplicar Cupon
+                </button>
+                <p id="ResultP"> </p>
+                <p id="ResultC"></p>
+            </form>
         </form>
-    </form>
+        <section class="card card-cupones">
+            <div class="discount-logo">
+                <img src="https://www.pngall.com/wp-content/uploads/2016/04/Discount-Free-PNG-Image.png" alt="">
+            </div>
+            <div class="cupones">
+                <div>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABmJLR0QA/wD/AP+gvaeTAAAEpklEQVRoge2aTWwUZRjHf890tvvR7tbGUrTKrdKGAgEiCVDjwcSKeOEALaXiRRMkQqvBBDVB+kGCNy0WQvQg8tGgEA6CiZBoTCSVKIEgLSGiHkBCbENCtx+0u9t9PCzFpe22uzszLbHzu0x2dvP/P/+8M+8877sDLi4uLi4uLi4uziAAqmoCW4AXAX8WOneAN0SkP/mkqr4ObLBapEUGgR+Az0TknqhqAPgeWGFFtXfTa+Ho+fOx5HMFXx4Melat8ljRtZELwPMm0ASsGLlxg8G9nxLv6clIJe/99zDLy1HVkI75rndbPWbFAkQMm2rOHGPOHAIN9eTMm/cs0GgCrwKEG94m1tmZsWCgtzfldxoOE/35fLa12kbsrz8pPHkSYJMBzAWIXb2alZgODCSOfX02lWc/sa4H2Z4QVVWAnmfmZyVmFBdjlpYS6eiwqTxnmHP9dwBMq0Lx7m4i3d2WC5ouZm42mSFmZeDE08SYHdkN4DaAZ/HirEXE67WrnjGMfbJbxwBOAIRaP8HMInR+4y4e//UXcp4qsbs27ne+tmIAO4GLRkkJhV9/RV5DPUj6RmZpKeL3Yzw9z/binMAQkTBQCezBMEYCW7eS37jLcePAm5spPH2a4O7dSG6u436jGAAiMiQiHyCyBtWIf+NGfNXrHTP1LFtG3vbtmGXz8dVU49uQekHlXb3a1loemppF5Cwi7wDk79iBhELpK2n6E4yEgmM+T+zjr6sjtLeVYHMzeOxZdI17FonIfuCchEL41q+bUmDo9LdEOjqIXbuWtmnkp3MMnzkDqsS6uhhqbx/3G39dHfm7PgSgv2U3RKNp60/GhLOTqtYC7dGLF7lb49z6XbxedHh43PmHwjY1c+/oUcteo710qm7jLIBZUQE5OZbNUjFdYZOZMLCI3AHC4vViFBTYajgZvprqpMu4xfawMHkvnbjcM5iMrOCrqSbY0gLcD3v4iCM+Ey4PVbUICOrwMPFw2BHjZJy+jJNJNcIvAcQ6u2BkxDFzSC+snb16qsBbgMSjYwr8tbU8dugQksW9PlVYo6iIwlPfUNR5hdC+Nlsm0HGBVfUtoFLDYYZOnJhSwPvKGjwrV2CWlWVk7Fu7dsqR9dXWYpaXJ3yqqsh9rjIjj4l4KLCqvozqxwD9ez7KbGMugwUHgGf5cmDye1bHzB8atr5RaAKoqg9oRPVdRHLuHT6S1uhaob+picEDBxi5eTPlb4aOHcMsLcVcsoThU6eIXrpk2ddU1RDwI7CUeJyBffsZbGuzLDwVGolMGhYSjUnfzp22+ppAC7B05NYtwvX1xH67kpFA7PofmIsWEf978uIfFURVbwEld9etJ3r5cnYiubloJGJvZTaT3Es/CRC9ktnIJvOoh03GYLSFjMdntpJpYnbszSbhBs5YYO5cciutd0DTheV/HoLNTRQc/CKxWfCo8l82NYB/AMyKBVlpSV5e4pifb0NlzmAufDAYt03gOLAt1NqaeOUhw78+R1dJ5sIKxMHtoGwxiosJNNSPfjwu91vL74CVM1fWtHABeCH5taXNQBUQmMmqHGCAxFtKn4vI0EwX4+Li4uLi4uLy/+VfAL+GedSb9YoAAAAASUVORK5CYII=">
+                    <p>Usa: "coupon1" para un 10%</p>
+                </div>
+                <div>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABmJLR0QA/wD/AP+gvaeTAAAEpklEQVRoge2aTWwUZRjHf890tvvR7tbGUrTKrdKGAgEiCVDjwcSKeOEALaXiRRMkQqvBBDVB+kGCNy0WQvQg8tGgEA6CiZBoTCSVKIEgLSGiHkBCbENCtx+0u9t9PCzFpe22uzszLbHzu0x2dvP/P/+8M+8877sDLi4uLi4uLi4uziAAqmoCW4AXAX8WOneAN0SkP/mkqr4ObLBapEUGgR+Az0TknqhqAPgeWGFFtXfTa+Ho+fOx5HMFXx4Melat8ljRtZELwPMm0ASsGLlxg8G9nxLv6clIJe/99zDLy1HVkI75rndbPWbFAkQMm2rOHGPOHAIN9eTMm/cs0GgCrwKEG94m1tmZsWCgtzfldxoOE/35fLa12kbsrz8pPHkSYJMBzAWIXb2alZgODCSOfX02lWc/sa4H2Z4QVVWAnmfmZyVmFBdjlpYS6eiwqTxnmHP9dwBMq0Lx7m4i3d2WC5ouZm42mSFmZeDE08SYHdkN4DaAZ/HirEXE67WrnjGMfbJbxwBOAIRaP8HMInR+4y4e//UXcp4qsbs27ne+tmIAO4GLRkkJhV9/RV5DPUj6RmZpKeL3Yzw9z/binMAQkTBQCezBMEYCW7eS37jLcePAm5spPH2a4O7dSG6u436jGAAiMiQiHyCyBtWIf+NGfNXrHTP1LFtG3vbtmGXz8dVU49uQekHlXb3a1loemppF5Cwi7wDk79iBhELpK2n6E4yEgmM+T+zjr6sjtLeVYHMzeOxZdI17FonIfuCchEL41q+bUmDo9LdEOjqIXbuWtmnkp3MMnzkDqsS6uhhqbx/3G39dHfm7PgSgv2U3RKNp60/GhLOTqtYC7dGLF7lb49z6XbxedHh43PmHwjY1c+/oUcteo710qm7jLIBZUQE5OZbNUjFdYZOZMLCI3AHC4vViFBTYajgZvprqpMu4xfawMHkvnbjcM5iMrOCrqSbY0gLcD3v4iCM+Ey4PVbUICOrwMPFw2BHjZJy+jJNJNcIvAcQ6u2BkxDFzSC+snb16qsBbgMSjYwr8tbU8dugQksW9PlVYo6iIwlPfUNR5hdC+Nlsm0HGBVfUtoFLDYYZOnJhSwPvKGjwrV2CWlWVk7Fu7dsqR9dXWYpaXJ3yqqsh9rjIjj4l4KLCqvozqxwD9ez7KbGMugwUHgGf5cmDye1bHzB8atr5RaAKoqg9oRPVdRHLuHT6S1uhaob+picEDBxi5eTPlb4aOHcMsLcVcsoThU6eIXrpk2ddU1RDwI7CUeJyBffsZbGuzLDwVGolMGhYSjUnfzp22+ppAC7B05NYtwvX1xH67kpFA7PofmIsWEf978uIfFURVbwEld9etJ3r5cnYiubloJGJvZTaT3Es/CRC9ktnIJvOoh03GYLSFjMdntpJpYnbszSbhBs5YYO5cciutd0DTheV/HoLNTRQc/CKxWfCo8l82NYB/AMyKBVlpSV5e4pifb0NlzmAufDAYt03gOLAt1NqaeOUhw78+R1dJ5sIKxMHtoGwxiosJNNSPfjwu91vL74CVM1fWtHABeCH5taXNQBUQmMmqHGCAxFtKn4vI0EwX4+Li4uLi4uLy/+VfAL+GedSb9YoAAAAASUVORK5CYII=">
+                    <p>Usa: "coupon2" para un 15%</p>
+                </div>
+                <div>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABmJLR0QA/wD/AP+gvaeTAAAEpklEQVRoge2aTWwUZRjHf890tvvR7tbGUrTKrdKGAgEiCVDjwcSKeOEALaXiRRMkQqvBBDVB+kGCNy0WQvQg8tGgEA6CiZBoTCSVKIEgLSGiHkBCbENCtx+0u9t9PCzFpe22uzszLbHzu0x2dvP/P/+8M+8877sDLi4uLi4uLi4uziAAqmoCW4AXAX8WOneAN0SkP/mkqr4ObLBapEUGgR+Az0TknqhqAPgeWGFFtXfTa+Ho+fOx5HMFXx4Melat8ljRtZELwPMm0ASsGLlxg8G9nxLv6clIJe/99zDLy1HVkI75rndbPWbFAkQMm2rOHGPOHAIN9eTMm/cs0GgCrwKEG94m1tmZsWCgtzfldxoOE/35fLa12kbsrz8pPHkSYJMBzAWIXb2alZgODCSOfX02lWc/sa4H2Z4QVVWAnmfmZyVmFBdjlpYS6eiwqTxnmHP9dwBMq0Lx7m4i3d2WC5ouZm42mSFmZeDE08SYHdkN4DaAZ/HirEXE67WrnjGMfbJbxwBOAIRaP8HMInR+4y4e//UXcp4qsbs27ne+tmIAO4GLRkkJhV9/RV5DPUj6RmZpKeL3Yzw9z/binMAQkTBQCezBMEYCW7eS37jLcePAm5spPH2a4O7dSG6u436jGAAiMiQiHyCyBtWIf+NGfNXrHTP1LFtG3vbtmGXz8dVU49uQekHlXb3a1loemppF5Cwi7wDk79iBhELpK2n6E4yEgmM+T+zjr6sjtLeVYHMzeOxZdI17FonIfuCchEL41q+bUmDo9LdEOjqIXbuWtmnkp3MMnzkDqsS6uhhqbx/3G39dHfm7PgSgv2U3RKNp60/GhLOTqtYC7dGLF7lb49z6XbxedHh43PmHwjY1c+/oUcteo710qm7jLIBZUQE5OZbNUjFdYZOZMLCI3AHC4vViFBTYajgZvprqpMu4xfawMHkvnbjcM5iMrOCrqSbY0gLcD3v4iCM+Ey4PVbUICOrwMPFw2BHjZJy+jJNJNcIvAcQ6u2BkxDFzSC+snb16qsBbgMSjYwr8tbU8dugQksW9PlVYo6iIwlPfUNR5hdC+Nlsm0HGBVfUtoFLDYYZOnJhSwPvKGjwrV2CWlWVk7Fu7dsqR9dXWYpaXJ3yqqsh9rjIjj4l4KLCqvozqxwD9ez7KbGMugwUHgGf5cmDye1bHzB8atr5RaAKoqg9oRPVdRHLuHT6S1uhaob+picEDBxi5eTPlb4aOHcMsLcVcsoThU6eIXrpk2ddU1RDwI7CUeJyBffsZbGuzLDwVGolMGhYSjUnfzp22+ppAC7B05NYtwvX1xH67kpFA7PofmIsWEf978uIfFURVbwEld9etJ3r5cnYiubloJGJvZTaT3Es/CRC9ktnIJvOoh03GYLSFjMdntpJpYnbszSbhBs5YYO5cciutd0DTheV/HoLNTRQc/CKxWfCo8l82NYB/AMyKBVlpSV5e4pifb0NlzmAufDAYt03gOLAt1NqaeOUhw78+R1dJ5sIKxMHtoGwxiosJNNSPfjwu91vL74CVM1fWtHABeCH5taXNQBUQmMmqHGCAxFtKn4vI0EwX4+Li4uLi4uLy/+VfAL+GedSb9YoAAAAASUVORK5CYII=">
+                    <p>Usa: "coupon3" para un 20%</p>
+                </div>
+                <div>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABmJLR0QA/wD/AP+gvaeTAAAEpklEQVRoge2aTWwUZRjHf890tvvR7tbGUrTKrdKGAgEiCVDjwcSKeOEALaXiRRMkQqvBBDVB+kGCNy0WQvQg8tGgEA6CiZBoTCSVKIEgLSGiHkBCbENCtx+0u9t9PCzFpe22uzszLbHzu0x2dvP/P/+8M+8877sDLi4uLi4uLi4uziAAqmoCW4AXAX8WOneAN0SkP/mkqr4ObLBapEUGgR+Az0TknqhqAPgeWGFFtXfTa+Ho+fOx5HMFXx4Melat8ljRtZELwPMm0ASsGLlxg8G9nxLv6clIJe/99zDLy1HVkI75rndbPWbFAkQMm2rOHGPOHAIN9eTMm/cs0GgCrwKEG94m1tmZsWCgtzfldxoOE/35fLa12kbsrz8pPHkSYJMBzAWIXb2alZgODCSOfX02lWc/sa4H2Z4QVVWAnmfmZyVmFBdjlpYS6eiwqTxnmHP9dwBMq0Lx7m4i3d2WC5ouZm42mSFmZeDE08SYHdkN4DaAZ/HirEXE67WrnjGMfbJbxwBOAIRaP8HMInR+4y4e//UXcp4qsbs27ne+tmIAO4GLRkkJhV9/RV5DPUj6RmZpKeL3Yzw9z/binMAQkTBQCezBMEYCW7eS37jLcePAm5spPH2a4O7dSG6u436jGAAiMiQiHyCyBtWIf+NGfNXrHTP1LFtG3vbtmGXz8dVU49uQekHlXb3a1loemppF5Cwi7wDk79iBhELpK2n6E4yEgmM+T+zjr6sjtLeVYHMzeOxZdI17FonIfuCchEL41q+bUmDo9LdEOjqIXbuWtmnkp3MMnzkDqsS6uhhqbx/3G39dHfm7PgSgv2U3RKNp60/GhLOTqtYC7dGLF7lb49z6XbxedHh43PmHwjY1c+/oUcteo710qm7jLIBZUQE5OZbNUjFdYZOZMLCI3AHC4vViFBTYajgZvprqpMu4xfawMHkvnbjcM5iMrOCrqSbY0gLcD3v4iCM+Ey4PVbUICOrwMPFw2BHjZJy+jJNJNcIvAcQ6u2BkxDFzSC+snb16qsBbgMSjYwr8tbU8dugQksW9PlVYo6iIwlPfUNR5hdC+Nlsm0HGBVfUtoFLDYYZOnJhSwPvKGjwrV2CWlWVk7Fu7dsqR9dXWYpaXJ3yqqsh9rjIjj4l4KLCqvozqxwD9ez7KbGMugwUHgGf5cmDye1bHzB8atr5RaAKoqg9oRPVdRHLuHT6S1uhaob+picEDBxi5eTPlb4aOHcMsLcVcsoThU6eIXrpk2ddU1RDwI7CUeJyBffsZbGuzLDwVGolMGhYSjUnfzp22+ppAC7B05NYtwvX1xH67kpFA7PofmIsWEf978uIfFURVbwEld9etJ3r5cnYiubloJGJvZTaT3Es/CRC9ktnIJvOoh03GYLSFjMdntpJpYnbszSbhBs5YYO5cciutd0DTheV/HoLNTRQc/CKxWfCo8l82NYB/AMyKBVlpSV5e4pifb0NlzmAufDAYt03gOLAt1NqaeOUhw78+R1dJ5sIKxMHtoGwxiosJNNSPfjwu91vL74CVM1fWtHABeCH5taXNQBUQmMmqHGCAxFtKn4vI0EwX4+Li4uLi4uLy/+VfAL+GedSb9YoAAAAASUVORK5CYII=">
+                    <p>Usa: "coupon4" para un 25%</p>
+                </div>
+            </div>
+        </section>
+    </main>
     <script src="./descuentos.js"></script>
 </body>
 </html>
