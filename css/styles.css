@@ -131,3 +131,26 @@ main form button:hover{
     width: 3rem;
     margin-right: 1rem;
 }
+
+.card-invest{
+    width: 60%;
+    height: 40rem;
+    margin: 8rem auto;
+    border-radius: 1.6rem;
+}
+.invest-title{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: var(--lg);
+    border-bottom: 0.4rem solid var(--enfasis);
+}
+.invest-content{
+    font-size: var(--md);
+    text-align: center;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 6rem;
+    row-gap: 2rem;
+}

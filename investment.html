@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invierte</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <main class="card card-invest">
+        <section class="invest-title">
+            <h1>Conoce tu inversion</h1>
+        </section>
+        <form class="invest-content">
+            <div>
+                <label for="InputMoney">Cuanto deseas invertir</label>
+                <input type="number" id="InputMoney">
+            </div>
+            <div>
+                <label for="InputInteres">Cual es el interes anual (en %)</label>
+                <input type="number" id="InputInteres">
+            </div>
+            <div>
+                <label for="InputTiempo">Tiempo de la inversion en años</label>
+                <input type="number" id="InputTiempo">
+            </div>
+            <div>
+                <label for="InputSelect">Tipo de interes</label>
+                <select name="intereses" id="InputSelect">
+                    <option value="sim">Simple</option>
+                    <option value="com">Compuesto</option>
+                </select>
+            </div>
+            <button type="button" onclick="elegirInteres()">
+                Calcular
+            </button>
+            <button type="reset">
+                Limpiar
+            </button>
+        </form>
+        <section>
+            <p id="Result">Resultado</p>
+        </section>
+    </main>
+    <script src="./investment.js"></script>
+</body>
+</html>
