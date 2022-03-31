@@ -17,6 +17,98 @@ html {
     background-color: #2a2e34;
 }
 
+.info-bar{
+    position: fixed;
+    background-color: var(--dark);
+    height: 100vh;
+    width: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.info-bar a{ 
+    color: var(--enfasis);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--md);
+    transform: rotate(-90deg) translate(-7rem, 0);
+}
+.info-logos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.info-bar img:nth-child(1){
+    width: 8.4rem;
+    height: 3.2rem;
+    transform: rotate(-90deg);
+    margin-bottom: 4rem;
+}
+.info-bar img:nth-child(2){
+    width: 4rem;
+    margin-bottom: 2rem;
+}
+
+.content-box{
+    display: flex;
+}
+.info-box{
+    background-color: var(--light);
+    margin-left: 8rem;
+    width: 64%;
+    padding: 4rem 0 0 3.6rem;
+}
+.info-box h3{
+    color: var(--enfasis);
+    font-size: 1.6rem;
+    margin-bottom: 2.4rem;
+}
+.info-box h1{
+    font-size: 4rem;
+    margin-bottom: 3.6rem;
+}
+.info-box ul{
+    list-style: none;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.info-box ul li:nth-child(1){
+    font-weight: bold;
+    font-size: var(--md);
+}
+.info-box p{
+    font-weight: bold;
+    font-size: var(--md);
+}
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAA */
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 36%;
+    background-color: var(--dark);
+    color: aliceblue;
+}
+.nav-bar-item{
+    display: flex;
+    align-items: center;
+    height: 33.33%;
+}
+.nav-bar-item img{
+    height: 4rem;
+    margin: 0 1.2rem 0 1.6rem;
+    filter: invert();
+}
+.nav-bar-item:hover{
+    background-color: var(--enfasis);
+    color: var(--dark);
+    cursor: pointer;
+}
+.nav-bar-item:hover img{
+    filter: none;
+}
+
 main {
     display: grid;
     grid-template-rows: repeat(2, 1fr);

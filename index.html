@@ -5,31 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Curso Practico de JS</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>
-            Talleres del curso Practico de JavaScript
-        </h1>
-        <p>Estos retos fueron desarrollados por Mi</p>
+    <header class="info-bar">
+        <a href="/">@ANDLEGO</a>
+        <div class="info-logos">
+            <img src="https://static.platzi.com/static/images/footer/logo.png" alt="">
+            <img src="https://static.platzi.com/media/achievements/jschallenge_piezas_badge-ef8e473b-5076-456a-9c19-5c0959f6f220.png">
+        </div>
     </header>
-    <section>
-        <nav>
+    <div class="content-box">
+        <section class="info-box">
+            <h3>TRABAJO PRÁCTICO -PLATZI</h3>
+            <h1>
+                Curso Práctico de JavaScript
+            </h1>
             <ul>
-                <li>
-                    <a href="./figuras.html">Taller 1</a>
-                </li>
-                <li>
-                    <a href="./descuentos.html">Taller 2</a>
-                </li>
-                <li>
-                    <a href="./promedio.html">Taller 3</a>
-                </li>
-                <li>
-                    <a href="./salarios.html">Taller 4</a>
-                </li>
+                <li>Temas Vistos en el curso:</li>
+                <li>Manipulacion del DOM</li>
+                <li>Metodos de Array</li>
+                <li>Functions</li>
+                <li>HTML y CSS</li>
             </ul>
-        </nav>
-    </section>
+            <ul>
+                <li>Cursos relacionados</li>
+                <li>Curso de Frontend - @teffcode</li>
+                <li>Curso Básico de Javascript - @degranda10</li>
+                <li>Curso Práctico de JavaScript - @juandc</li>
+            </ul>
+            <p>Utiliza los talleres para hacer tus calculos</p>
+            
+        </section>
+        <section class="nav-bar">       
+                <div class="nav-bar-item" onclick="location.href='./figuras.html'"> 
+                    <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-geometric-shape-fine-arts-flatart-icons-outline-flatarticons.png"/>              
+                    <div>
+                        <h3>TALLER #1</h3>
+                        <h1>Figuras Geometricas</h1>
+                        <p>Calculo básico para Cuadrados, Triangulos y Circulos</p>
+                    </div>
+                </div>
+                <div class="nav-bar-item" onclick="location.href='./descuentos.html'">
+                    <img src="https://img.icons8.com/external-nawicon-detailed-outline-nawicon/64/000000/external-label-black-friday-nawicon-detailed-outline-nawicon.png"/>
+                    <div>
+                        <h3>TALLER #2</h3>
+                        <h1>Precios y Descuentos</h1>
+                        <p>Calculo básico para precios, descuentos y cupones de pago</p>
+                    </div>
+                </div>
+                <div class="nav-bar-item" onclick="location.href='./prom-med-mod.html'">
+                    <img src="https://img.icons8.com/external-outline-geotatah/64/000000/external-percentage-world-economic-recovery-outline-geotatah.png"/>
+                    <div>
+                        <h3>TALLER #3</h3>
+                        <h1>Promedios, Moda y Mediana</h1>
+                        <p>Calculos básicos y avanzados</p>
+                    </div>
+                </div>
+                <div class="nav-bar-item" onclick="location.href='./salarios.html'">
+                    <img src="https://img.icons8.com/external-becris-lineal-becris/64/000000/external-salary-customer-loyalty-program-becris-lineal-becris.png"/>
+                    <div>
+                        <h3>TALLER #4</h3>
+                        <h1>Analisis Salarial</h1>
+                        <p>Calculo básico para trabajar con salarios, medianas y top 10%</p>
+                    </div>
+                </div>
+                <div class="nav-bar-item" onclick="location.href='./investment.html'">
+                    <img src="https://img.icons8.com/external-wanicon-lineal-wanicon/64/000000/external-salary-labour-day-wanicon-lineal-wanicon.png"/>
+                    <div>
+                        <h3>Reto #1</h3>
+                        <h1>Interes Simple y Compuesto</h1>
+                        <p>Calculo para determinar ingreso de un interes simple o compuesto</p>
+                    </div>
+                </div>
+                <div class="nav-bar-item" onclick="location.href='./finanzasMes.html'">
+                    <img src="https://img.icons8.com/external-outline-juicy-fish/60/000000/external-groceries-supermarket-outline-outline-juicy-fish.png"/>
+                    <h3>Reto #2</h3>
+                    <div>
+                        <h1>Lista de compras</h1>
+                        <p>Ejercicio para realizar una lista de compras y organizar sus objetos</p>
+                    </div>
+                </div>                 
+        </section>
+    </div>
 </body>
 </html>
