@@ -10,7 +10,7 @@ function calcularInteresSimple(){
     const result = document.getElementById("Result");
 
   
-    return result.innerText = `Tu inversión con un capital de ${capitalInicial} y un interes simple de ${porcentajeInteres} % anual por un tiempo de ${tiempo} años retornaria ${interesSimple}`;
+    return result.innerText = `Tu inversión con un capital de ${capitalInicial} y un interes simple de ${porcentajeInteres} % por un tiempo de ${tiempo} unidades retornaria ${interesSimple}`;
 }
 
 //Calculador Interes Compuesto
@@ -24,12 +24,11 @@ function calcularInteresCompuesto(){
     const interesCompuesto = capitalInicial * (((1 + porcentajeInteres / 100) ** tiempo) - 1);
   
     const result = document.getElementById("Result");
-    return result.innerText =  `Tu inversión con un capital de ${capitalInicial} y un interes compuesto de ${porcentajeInteres} % anual por un tiempo de ${tiempo} años retornaria ${interesCompuesto.toFixed(2)}`;
+    return result.innerText =  `Tu inversión con un capital de ${capitalInicial} y un interes compuesto de ${porcentajeInteres} %  por un tiempo de ${tiempo} unidades retornaria ${interesCompuesto.toFixed(2)}`;
 }
-
+//Elegir que tipo de interes
 function elegirInteres(){
     const tipoInteres = document.getElementById("InputSelect")
-    console.log(tipoInteres.value)
     if(tipoInteres.value == "sim"){
         calcularInteresSimple()
     }else{
